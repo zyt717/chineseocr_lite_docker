@@ -14,4 +14,5 @@ RUN apt-get update && \
 	sed -i '/self.start_response = start_response/a\        self.directory = os.getcwd()' /opt/conda/lib/python3.7/site-packages/web/httpserver.py
 
 EXPOSE 8080
+
 ENTRYPOINT ["python","app.py","8080"]
